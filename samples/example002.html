@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Customers</title>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+		<script src="http://oemobiledemo.progress.com/jsdo/progress.session.js"></script>        
+        <script src="http://oemobiledemo.progress.com/jsdo/progress.js"></script>
+        <script src="example002.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="custlist">
+            <div data-theme="b" data-role="header">
+                <h3>Customers</h3>
+            </div>
+            <div data-role="content">            
+                <ul id="listview" data-role="listview" data-divider-theme="b" data-inset="true" data-filter="true">
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="page" id="custdetail" data-add-back-btn="true" data-theme="b">
+        <div data-theme="b" data-role="header"><h1>Customer</h1></div>
+        <div data-role="content">       
+                <form action="" id="customerform">
+<!--                      
+		<input id="CustNum" name="CustNum">
+		<input id="Name" name="Name">
+-->
+                </form>
+        </div>
+        </div>
+    </body>
+</html>
+

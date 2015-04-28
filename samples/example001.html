@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://oemobiledemo.progress.com/jsdo/progress.session.js"></script>
+	<script src="http://oemobiledemo.progress.com/jsdo/progress.js"></script>
+	<script>
+		var serviceURI = "http://oemobiledemo.progress.com/MobilityDemoService"; 
+		var catalogURI = "http://oemobiledemo.progress.com/MobilityDemoService/static/mobile/MobilityDemoService.json";
+
+		session = new progress.data.Session();
+		session.login(serviceURI, "", "");
+		session.addCatalog(catalogURI);
+
+		jsdo = new progress.data.JSDO({ name: 'dsCustomer' });
+		jsdo.subscribe('AfterFill', onAfterFillCustomers, this);	
+		jsdo.fill();
+
+		function onAfterFillCustomers(jsdo, success, request) {
+			jsdo.eCustomer.foreach(function(customer) {
+				//console.log(jsdo.eCustomer.Name);
+				document.write(customer.data.CustNum + ' ' + customer.data.Name + '<br>');
+			});	
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>
